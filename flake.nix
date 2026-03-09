@@ -1,39 +1,49 @@
 {
-  description = "NixOS configuration for hongkong";
+  description = "NixOS configuration for paris";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
 
     nix-config = {
-      url = "path:/home/grim/nix-config";
+      url = "github:GrimOutlook/nix-config";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs =
-    inputs@{ nix-config, ... }:
+    inputs@{ self, nix-config, ... }:
     nix-config.inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
         nix-config.modules.flake.hosts
-        (nix-config + "/modules/flake/systems.nix")
+        nix-config.modules.flake.host-info
+        (nix-config + "/flakes/systems.nix")
       ];
-      host.hongkong = {
-        nixos = {
-          modules = with nix-config.modules.nixos; [
-            dev
-            wsl
-          ];
-          system = {
-            autoUpgrade.enable = false;
-            stateVersion = "25.05";
-          };
+
+      modules = [
+        "desktop"
+        "dev"
+        "laptop"
+        "networking"
+        "physical"
+      ];
+
+      host-info = rec {
+        name = "paris";
+        flake = "github:GrimOutlook/nix-host-${name}";
+      };
+
+      nixos = {
+        imports = [
+          ./hardware.nix
+        ];
+        system = {
+          autoUpgrade.enable = true;
+          stateVersion = "25.05";
         };
-        home = {
-          modules = with nix-config.modules.homeManager; [
-            dev
-          ];
-          home.stateVersion = "25.11";
-        };
+      };
+
+      home = {
+        home.stateVersion = "25.11";
       };
     };
 }
