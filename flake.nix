@@ -20,6 +20,7 @@
       ];
 
       modules = [
+        "bluetooth"
         "desktop"
         "dev"
         "laptop"
