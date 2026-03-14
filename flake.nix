@@ -12,6 +12,12 @@
 
   outputs =
     inputs@{ self, nix-config, ... }:
+    let
+      pkgs = import inputs.nixpkgs {
+        system = "x86_64-linux";
+        config.allowUnfree = true;
+      };
+    in
     nix-config.inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
         nix-config.modules.flake.hosts
@@ -33,8 +39,14 @@
       };
 
       nixos = {
-        imports = [
-          ./hardware.nix
+        modules = [ ./hardware.nix ];
+        environment.systemPackages = with pkgs; [
+          chromium
+          qmk
+          qmk_hid
+        ];
+        services.udev.packages = with pkgs; [
+          qmk-udev-rules
         ];
         system = {
           autoUpgrade.enable = true;
@@ -42,15 +54,13 @@
         };
       };
 
-      home =
-        { pkgs, ... }:
-        {
-          home = {
-            packages = with pkgs; [
-              prusa-slicer
-            ];
-            stateVersion = "25.11";
-          };
+      home = {
+        home = {
+          packages = with pkgs; [
+            prusa-slicer
+          ];
+          stateVersion = "25.11";
         };
+      };
     };
 }
