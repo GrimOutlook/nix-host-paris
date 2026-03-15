@@ -58,6 +58,7 @@
         home = {
           packages = with pkgs; [
             prusa-slicer
+            orca-slicer
           ];
           stateVersion = "25.11";
         };
