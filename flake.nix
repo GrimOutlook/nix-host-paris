@@ -42,6 +42,7 @@
         modules = [ ./hardware.nix ];
         environment.systemPackages = with pkgs; [
           chromium
+          keepassxc
           qmk
           qmk_hid
         ];
