@@ -27,9 +27,10 @@
 
       modules = [
         "bluetooth"
+        "build-arm"
         "dev"
         "laptop"
-        "networking"
+        "network-diag"
         "virtualization"
       ];
 
@@ -39,7 +40,7 @@
       };
 
       nixos = {
-        modules = [ ./hardware.nix ];
+        imports = [ ./modules/hardware.nix ];
         environment.systemPackages = with pkgs; [
           chromium
           keepassxc
@@ -56,6 +57,7 @@
       };
 
       home = {
+        imports = [ ./modules/hyprpanel.nix ];
         home = {
           packages = with pkgs; [
             prusa-slicer
