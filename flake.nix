@@ -2,20 +2,31 @@
   description = "NixOS configuration for paris";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    homelab.url = "git+ssh://git@github.com/GrimOutlook/nix-homelab";
 
     nix-config = {
       url = "github:GrimOutlook/nix-config";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
   };
 
   outputs =
-    inputs@{ self, nix-config, ... }:
+    inputs@{
+      self,
+      homelab,
+      nix-config,
+      ...
+    }:
     let
       pkgs = import inputs.nixpkgs {
         system = "x86_64-linux";
         config.allowUnfree = true;
+      };
+      host-info = rec {
+        name = "paris";
+        flake = "github:GrimOutlook/nix-host-${name}";
       };
     in
     nix-config.inputs.flake-parts.lib.mkFlake { inherit inputs; } {
@@ -34,13 +45,12 @@
         "virtualization"
       ];
 
-      host-info = rec {
-        name = "paris";
-        flake = "github:GrimOutlook/nix-host-${name}";
-      };
+      inherit host-info;
 
       nixos = {
-        imports = [ ./modules/hardware.nix ];
+        imports = [
+          ./modules/hardware.nix
+        ];
         environment.systemPackages = with pkgs; [
           chromium
           keepassxc
@@ -57,7 +67,12 @@
       };
 
       home = {
-        imports = [ ./modules/hyprpanel.nix ];
+        imports = [
+          homelab.homeManagerModules.default
+
+          ./modules/hyprpanel.nix
+        ];
+        homelab.ssh_config.enable = true;
         home = {
           packages = with pkgs; [
             prusa-slicer
