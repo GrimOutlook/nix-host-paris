@@ -1,0 +1,4 @@
+[submodule ".just"]
+	path = .just
+	url = git@github.com:GrimOutlook/nix-just
+	branch = main
