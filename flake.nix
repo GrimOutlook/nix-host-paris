@@ -41,6 +41,9 @@
         "build-arm"
         "dev"
         "laptop"
+        "lang_rust"
+        "lang_toml"
+        "lang_yaml"
         "network-diag"
         "virtualization"
       ];
