@@ -21,6 +21,13 @@
   services.udev.packages = with pkgs; [
     qmk-udev-rules
   ];
+  programs = {
+    steam.enable = true;
+    # gamemode = {
+    #   enable = true;
+    #   enableRenice = true;
+    # };
+  };
 
   host.home-manager.config = {
     imports = [
