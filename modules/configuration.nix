@@ -5,6 +5,7 @@
     bluetooth.enable = true;
     build-arm.enable = true;
     dev.enable = true;
+    lang.nix.enable = true;
     lang.rust.enable = true;
     lang.typescript.enable = true;
     network-diag.enable = true;
