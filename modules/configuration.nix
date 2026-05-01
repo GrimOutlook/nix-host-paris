@@ -1,13 +1,15 @@
 { inputs, pkgs, ... }:
 {
 
+  host.hostname = "paris";
   host = {
     bluetooth.enable = true;
     build-arm.enable = true;
     dev.enable = true;
-    lang.nix.enable = true;
-    lang.rust.enable = true;
-    lang.typescript.enable = true;
+    dev.lang.nix.enable = true;
+    dev.lang.python.enable = true;
+    dev.lang.rust.enable = true;
+    dev.lang.typescript.enable = true;
     network-diag.enable = true;
     type.laptop.enable = true;
     virtualization.enable = true;
@@ -28,6 +30,7 @@
     #   enable = true;
     #   enableRenice = true;
     # };
+    nix-ld.enable = true;
   };
 
   host.home-manager.config = {
@@ -37,8 +40,9 @@
     homelab.ssh_config.enable = true;
     home = {
       packages = with pkgs; [
-        prusa-slicer
+        obsidian
         orca-slicer
+        prusa-slicer
       ];
     };
   };
