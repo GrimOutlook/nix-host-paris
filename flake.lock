@@ -396,11 +396,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1777596753,
-        "narHash": "sha256-W238eb+pTmR4H0u/ARjLRUKcaPXqv3ugt8Nhn4UO96E=",
+        "lastModified": 1777818350,
+        "narHash": "sha256-SkugXNFuQ/mU0n8GgcyLvjTKA+lP8bCFs733gtzN+2Y=",
         "ref": "refs/heads/main",
-        "rev": "0fec6b8ac6ec74cf0a927088d0cd53b90cd69a8b",
-        "revCount": 52,
+        "rev": "f4eaba77a58126888a8cc27b73104d5b6b256f5c",
+        "revCount": 53,
         "type": "git",
         "url": "ssh://git@github.com/GrimOutlook/nix-homelab"
       },
@@ -483,7 +483,6 @@
         ],
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixvim": "nixvim",
-        "plenary-nvim": "plenary-nvim",
         "smart-scrolloff-nvim": "smart-scrolloff-nvim",
         "stylix": "stylix",
         "tiny-code-action-nvim": "tiny-code-action-nvim",
@@ -491,11 +490,11 @@
         "wayfinder-nvim": "wayfinder-nvim"
       },
       "locked": {
-        "lastModified": 1777627912,
-        "narHash": "sha256-14wsIZqW/SPXgVXg5+HGE0BsvLgHxf76N39+8B4bid0=",
+        "lastModified": 1778428059,
+        "narHash": "sha256-rLha3Z19CmmRjhYOkkFcl+T39YIpHwYy1NvmtDhAxhI=",
         "owner": "GrimOutlook",
         "repo": "nix-config",
-        "rev": "a56de8db16c38d1b5f08a422716a953b99e45d12",
+        "rev": "1b4220071e6b12be2e010dc1b0f082cce7ba9738",
         "type": "github"
       },
       "original": {
@@ -655,11 +654,11 @@
     },
     "nixpkgs_5": {
       "locked": {
-        "lastModified": 1777428379,
-        "narHash": "sha256-ypxFOeDz+CqADEQNL72haqGjvZQdBR5Vc7pyx2JDttI=",
+        "lastModified": 1778003029,
+        "narHash": "sha256-q/nkKLDtHIyLjZpKhWk3cSK5IYsFqtMd6UtXF3ddjgA=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "755f5aa91337890c432639c60b6064bb7fe67769",
+        "rev": "0c88e1f2bdb93d5999019e99cb0e61e1fe2af4c5",
         "type": "github"
       },
       "original": {
@@ -713,22 +712,6 @@
       "original": {
         "owner": "nix-community",
         "repo": "NUR",
-        "type": "github"
-      }
-    },
-    "plenary-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1775800366,
-        "narHash": "sha256-nkfETDkPiE+Kd2BWYZijgUp9bP8RgFwRmvqJz2BMuq4=",
-        "owner": "nvim-lua",
-        "repo": "plenary.nvim",
-        "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nvim-lua",
-        "repo": "plenary.nvim",
         "type": "github"
       }
     },

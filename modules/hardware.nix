@@ -11,7 +11,6 @@
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
-    ./hardware.nix
   ];
   boot = {
     initrd.availableKernelModules = [

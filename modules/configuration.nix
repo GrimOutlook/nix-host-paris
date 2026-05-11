@@ -6,6 +6,7 @@
     bluetooth.enable = true;
     build-arm.enable = true;
     dev.enable = true;
+    dev.embedded.enable = true;
     dev.lang.nix.enable = true;
     dev.lang.python.enable = true;
     dev.lang.rust.enable = true;
