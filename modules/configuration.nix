@@ -32,6 +32,8 @@
     #   enableRenice = true;
     # };
     nix-ld.enable = true;
+
+    thunderbird.enable = true;
   };
 
   host.home-manager.config = {
