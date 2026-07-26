@@ -13,7 +13,10 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
   boot = {
-    blacklistedKernelModules = [ "psmouse" ];
+    blacklistedKernelModules = [
+      "psmouse"
+      "nouveau"
+    ];
     initrd.availableKernelModules = [
       "xhci_pci"
       "thunderbolt"
