@@ -7,21 +7,15 @@
 
   outputs =
     inputs@{
-      self,
       nix-config,
-      nixpkgs,
       ...
     }:
-    {
-      nixosConfigurations.paris = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {
-          inherit inputs;
-        };
-        modules = [
-          nix-config.nixosModules.default
-        ]
-        ++ builtins.map (f: ./modules + "/${f}") (builtins.attrNames (builtins.readDir ./modules));
-      };
+    nix-config.lib.mkHost {
+      hostname = "paris";
+      system = "x86_64-linux";
+      specialArgs = { inherit inputs; };
+      modules = builtins.map (f: ./modules + "/${f}") (
+        builtins.attrNames (builtins.readDir ./modules)
+      );
     };
 }
