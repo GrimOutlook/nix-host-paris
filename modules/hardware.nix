@@ -24,6 +24,10 @@
     ];
     initrd.kernelModules = [ ];
     kernelModules = [ "kvm-intel" ];
+    kernelParams = [
+      "i915.enable_psr=0"
+      "i2c_designware.pm_disabled=1"
+    ];
     extraModulePackages = [ ];
   };
 
