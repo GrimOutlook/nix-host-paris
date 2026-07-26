@@ -568,11 +568,11 @@
         "wayfinder-nvim": "wayfinder-nvim"
       },
       "locked": {
-        "lastModified": 1785056409,
-        "narHash": "sha256-smQGS5WvtEH9wkUUIzuqXugmdCXghPDDu/TIL0P3R4c=",
+        "lastModified": 1785057475,
+        "narHash": "sha256-ZMeZaaub/pKJDqwHS4HH30CzRJ+WoQZg79T2I87GFYQ=",
         "owner": "GrimOutlook",
         "repo": "nix-config",
-        "rev": "eb9b066af4e3c9b7d231881b93f6cdb3677735a9",
+        "rev": "c1e1a4eaaef225d5ddb1c8c81d64bc1315ed0698",
         "type": "github"
       },
       "original": {
