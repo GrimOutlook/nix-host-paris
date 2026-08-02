@@ -453,11 +453,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1785061203,
-        "narHash": "sha256-l8E0hjt1vDPFmduND0DxC5It4N08NEmKjX5y9No2BCs=",
+        "lastModified": 1785606595,
+        "narHash": "sha256-RGJY1odzNBfq8JHg5w4SZuB/iZTROSz/Y8sTR5ZgSqQ=",
         "ref": "refs/heads/main",
-        "rev": "baacdfa067c5ab89a09b9ccc4ba23e8b3f7d81c9",
-        "revCount": 80,
+        "rev": "496474e9152802dd47c82917494c40fbf50e53e9",
+        "revCount": 82,
         "type": "git",
         "url": "ssh://git@github.com/GrimOutlook/nix-homelab"
       },
@@ -568,11 +568,11 @@
         "wayfinder-nvim": "wayfinder-nvim"
       },
       "locked": {
-        "lastModified": 1785189639,
-        "narHash": "sha256-wxJIFN4r2vIvkRkBLG+QkbEmTlUElbq9dCL/YWTL/8A=",
+        "lastModified": 1785649695,
+        "narHash": "sha256-Ek0nqpxPzqB0qnHxEo365ydHoBUV6S+tCivk8DrRwbU=",
         "owner": "GrimOutlook",
         "repo": "nix-config",
-        "rev": "04b544f1f8be72f442b3e3282761e77569827b57",
+        "rev": "cef2c0d7f35353cc54e771e693c63dcfc5dc29d0",
         "type": "github"
       },
       "original": {
