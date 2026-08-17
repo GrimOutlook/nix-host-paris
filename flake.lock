@@ -223,11 +223,11 @@
         "rust-analyzer-src": "rust-analyzer-src"
       },
       "locked": {
-        "lastModified": 1786348189,
-        "narHash": "sha256-tnTpFky6/GeXVMBO+hLJK2jWS4J8TYloL+rqRME9gAk=",
+        "lastModified": 1786520346,
+        "narHash": "sha256-2CVNv6zvKhr/Xky1jkZXZfCTKfZpyo0gij70lR1DMTA=",
         "owner": "nix-community",
         "repo": "fenix",
-        "rev": "a0b1aef63d7e9c5568958e0d90f6fe48f0f4a7a2",
+        "rev": "9a4f7863c93539f17a1785962d58471fdc7f5fe4",
         "type": "github"
       },
       "original": {
@@ -453,11 +453,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1786397362,
-        "narHash": "sha256-UGAV7/Zz/JdABBCyL0D8kwChhfuV4mg/sCdVDxVxKts=",
+        "lastModified": 1786681588,
+        "narHash": "sha256-gPpxZUt74DIoEVQt0hCjk6vo7l4wt4jwivTfrL8JNgA=",
         "ref": "refs/heads/main",
-        "rev": "f4ab4750b9d45383749146ca99a4242d54332936",
-        "revCount": 91,
+        "rev": "664e34b2068be1a7e273bc79d54b63775e04bb21",
+        "revCount": 98,
         "type": "git",
         "url": "ssh://git@github.com/GrimOutlook/nix-homelab"
       },
@@ -497,6 +497,40 @@
         "type": "github"
       }
     },
+    "linux-hardened": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786385321,
+        "narHash": "sha256-bdkx4MW1QOk4XlyVbxzp6Alebe6bry7pFDSwIuKFM2w=",
+        "owner": "anthraxx",
+        "repo": "linux-hardened",
+        "rev": "ffb077ccdf0de144d84b5c4a03096ce85d9cab15",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anthraxx",
+        "ref": "7.1",
+        "repo": "linux-hardened",
+        "type": "github"
+      }
+    },
+    "linux-hardened-zfs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1782899731,
+        "narHash": "sha256-BVfxsVYY79UlIgHbxkj3k114IrdQJfaPwc2v/eED5f8=",
+        "owner": "anthraxx",
+        "repo": "linux-hardened",
+        "rev": "9a145596154fb550a38bff936c6a0ce1272d19f9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anthraxx",
+        "ref": "v7.0.14-hardened1",
+        "repo": "linux-hardened",
+        "type": "github"
+      }
+    },
     "llm-agents": {
       "inputs": {
         "bun2nix": "bun2nix",
@@ -506,11 +540,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1786409560,
-        "narHash": "sha256-AVQf47gVcJZHI8mPHyIcWZcpB3jI/4UzdVimmL79Ris=",
+        "lastModified": 1786581881,
+        "narHash": "sha256-02cu7iUeQNpQ6e5y/zBCQLJXpKNe7evv/9hYIwyEIro=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
-        "rev": "1f2ee1ae801d5ba4195b81ff2ff2c2429f3a9baf",
+        "rev": "0948ef0098ceb7b909e01ad0151ce0077b25d435",
         "type": "github"
       },
       "original": {
@@ -552,6 +586,8 @@
         "home-manager": "home-manager_2",
         "import-tree": "import-tree",
         "karen-yank-nvim": "karen-yank-nvim",
+        "linux-hardened": "linux-hardened",
+        "linux-hardened-zfs": "linux-hardened-zfs",
         "llm-agents": "llm-agents",
         "microvm": "microvm",
         "nix-index-database": "nix-index-database",
@@ -568,11 +604,11 @@
         "wayfinder-nvim": "wayfinder-nvim"
       },
       "locked": {
-        "lastModified": 1786415328,
-        "narHash": "sha256-TTJnDIQiDihyQmjRl8AiEPbo+jiSA1ozk/ktYMaAb3M=",
+        "lastModified": 1786925466,
+        "narHash": "sha256-SbVJTFsZnoNNQqT9KQE5BCzWQr8l4JdTXhrRHXpWLpo=",
         "owner": "GrimOutlook",
         "repo": "nix-config",
-        "rev": "c074d6326382e8a2c59cf3d3704103fca49d6182",
+        "rev": "0eb9415f9660cd5957230e4904ca69145a7b7f28",
         "type": "github"
       },
       "original": {
@@ -622,11 +658,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1785232496,
-        "narHash": "sha256-65EQYIRRpTdpH8lUiB6Mvo5uBkG60aBIzAJuALfx+O0=",
+        "lastModified": 1786528975,
+        "narHash": "sha256-8KuasCs+mVQ7WbLONUf/QB7NZeQvovyXRyxAj4nOOzY=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "2e790b0a6be8ec2b76174ac0931b8ff11919ec98",
+        "rev": "3e7edd9afe17e45521300e041c65de3015f4a302",
         "type": "github"
       },
       "original": {
@@ -671,11 +707,11 @@
     },
     "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1786106723,
-        "narHash": "sha256-zDSUbpoeo/9ZmD2+wXnzxoo1+uhL8vxc0b8yuYMKYq0=",
+        "lastModified": 1786384358,
+        "narHash": "sha256-RzPPiWeUtuvymnpuEWsdtzli5w4kjZs49FqEs3/1u+I=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "f13ff45afd1bb73e640eaa08a7066dbed07e3238",
+        "rev": "2fcb964de67fcf60b43471c55d5d99e61a9ccb5a",
         "type": "github"
       },
       "original": {
@@ -703,11 +739,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1786098110,
-        "narHash": "sha256-shi1tjDhCGGd0kIgVPNY03V8NBWSTzhMSFDb7IqSoec=",
+        "lastModified": 1786410043,
+        "narHash": "sha256-JTbODJPDcd3d8U7lO4MVUU3Yo0jz2KQSAHXka+IWBEo=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "afb4584a80bbf779ce0f691509ff902d188c2b3d",
+        "rev": "8e2eeb9477c9d40009a5bd51cd3eef2f5abb26f1",
         "type": "github"
       },
       "original": {
@@ -748,11 +784,11 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1786313170,
-        "narHash": "sha256-9BG7OgUWdu0ONDO5X2q6+K4bsuBITkX/3W4nNJu1Ito=",
+        "lastModified": 1786535285,
+        "narHash": "sha256-rG5HKMAgAhMgydvKGtco6rqTxRq4EDZQCx9USLvVqYw=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "fcb8fcd6bf2d0adecae5bd491afaaaf8311b758d",
+        "rev": "9f78f44a87948854445dae0b6bf82b2e87e4efb5",
         "type": "github"
       },
       "original": {
@@ -826,11 +862,11 @@
     "rust-analyzer-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1786285255,
-        "narHash": "sha256-zJukKxGKLxcO7E6+P49Qe6XaSbbyGG44kFvQYLWaD3M=",
+        "lastModified": 1786467811,
+        "narHash": "sha256-56LDY016VYO+KOfJ3FN98kM7S2GIE2HQSbkxgzXW6jE=",
         "owner": "rust-lang",
         "repo": "rust-analyzer",
-        "rev": "57411b3a0fb0181ed5965f6541d5ed39a9d79d4c",
+        "rev": "b2d445b22a2dd4c3469dfeddc2d5eb533c42baf6",
         "type": "github"
       },
       "original": {
