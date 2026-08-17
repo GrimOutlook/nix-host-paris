@@ -2,9 +2,9 @@
   host.home-manager.config = {
     programs.ssh.settings = {
       "Host Newyork" = {
-        HostName = "video.grimaldifamily.org";
+        HostName = "grimaldifamily.org";
         Port = 49999;
-        User = "root";
+        User = "grim";
       };
       "Host Berlin" = {
         HostName = "berlin";
