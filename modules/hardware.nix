@@ -30,6 +30,7 @@
     kernelModules = [ "kvm-intel" ];
     kernelParams = [
       "i915.enable_psr=0"
+      "i915.enable_guc=3"
       "i2c_designware.pm_disabled=1"
     ];
     extraModulePackages = [ ];
