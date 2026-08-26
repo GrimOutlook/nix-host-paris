@@ -27,8 +27,7 @@
         ProxyJump = "Newyork";
       };
       # Only speaks SHA-1 era crypto, which OpenSSH disables by default.
-      "Host Switch" = {
-        HostName = "10.255.18.253";
+      "Host cisco-switch" = {
         User = "admin";
         KexAlgorithms = "+diffie-hellman-group14-sha1";
         HostKeyAlgorithms = "+ssh-rsa";
