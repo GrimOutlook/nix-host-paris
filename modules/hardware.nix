@@ -30,7 +30,14 @@
     kernelModules = [ "kvm-intel" ];
     kernelParams = [
       "i915.enable_psr=0"
-      "i915.enable_guc=3"
+      # enable_guc=2 (submission only, no HuC auth) instead of 3: HuC
+      # involvement in engine-level resets was implicated in a GPU HANG on
+      # rcs0 (CanvasRenderer/WebGL) where the reset itself timed out and
+      # took the whole machine down instead of just the GPU/compositor.
+      "i915.enable_guc=2"
+      # Fall back to a whole-GPU reset instead of leaving the engine stuck
+      # after a failed per-engine reset.
+      "i915.reset=2"
       "i2c_designware.pm_disabled=1"
     ];
     extraModulePackages = [ ];
