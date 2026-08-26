@@ -29,6 +29,10 @@
   services.udev.packages = with pkgs; [
     qmk-udev-rules
   ];
+  # Cisco USB console cable, for switch/router console access
+  services.usbguard.rules = ''
+    allow id 05a6:0009 with-interface { 02:02:01 0a:00:00 }
+  '';
   programs = {
     steam.enable = true;
     # gamemode = {
