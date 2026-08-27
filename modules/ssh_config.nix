@@ -29,6 +29,7 @@
       # Only speaks SHA-1 era crypto, which OpenSSH disables by default.
       "Host cisco-switch" = {
         User = "admin";
+        IdentityFile = "~/.ssh/id_rsa_cisco_switch";
         KexAlgorithms = "+diffie-hellman-group14-sha1";
         HostKeyAlgorithms = "+ssh-rsa";
         PubkeyAcceptedAlgorithms = "+ssh-rsa";
