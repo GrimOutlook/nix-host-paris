@@ -11,6 +11,22 @@
     # this option is what actually drops the unit's [Install] section.
     autostart = false;
     address = [ "172.16.0.3/24" ];
+    # Point at newyork's dnsmasq (it listens on the wg0 address) so LAN
+    # hostnames resolve while roaming; the routes below are useless without a
+    # resolver that knows `home.arpa`. On the home LAN this is redundant --
+    # DHCP already hands out the same server -- but off-LAN the foreign
+    # network's resolver knows nothing about these names. The bare domain
+    # entry becomes a search domain, so `dubai` works as well as
+    # `dubai.home.arpa`.
+    #
+    # Note this replaces the system resolver outright for as long as wg0 is
+    # up, rather than routing only `home.arpa` to newyork -- acceptable
+    # because the interface is started by hand, but it does mean a captive
+    # portal has to be dealt with before bringing the tunnel up.
+    dns = [
+      "172.16.0.1"
+      "home.arpa"
+    ];
     # Installed via a PostUp `wg set ... private-key` hook, so the key is
     # never copied into the world-readable /nix/store config file.
     privateKeyFile = config.age.secrets.wireguard-newyork-key.path;
