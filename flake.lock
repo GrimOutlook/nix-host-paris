@@ -597,6 +597,7 @@
         "nixpkgs": "nixpkgs_6",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixvim": "nixvim",
+        "noctalia-greeter": "noctalia-greeter",
         "smart-scrolloff-nvim": "smart-scrolloff-nvim",
         "stylix": "stylix",
         "tiny-code-action-nvim": "tiny-code-action-nvim",
@@ -604,11 +605,11 @@
         "wayfinder-nvim": "wayfinder-nvim"
       },
       "locked": {
-        "lastModified": 1787888950,
-        "narHash": "sha256-vDC9T2f/vkm4CIuvviP1aV6jY9guFGK0cfrYTgBMlac=",
+        "lastModified": 1787914457,
+        "narHash": "sha256-luR4LAWrLXGYB9L3XZpifQDsOuUEB8FDCnplM9GxqoI=",
         "owner": "GrimOutlook",
         "repo": "nix-config",
-        "rev": "1200e5676c920daf11e4d841872fc3246ac864f3",
+        "rev": "15a78d7de05ad88f0c7f6a5802b4f3ab84e96a8c",
         "type": "github"
       },
       "original": {
@@ -819,6 +820,27 @@
         "owner": "nix-community",
         "ref": "nixos-26.05",
         "repo": "nixvim",
+        "type": "github"
+      }
+    },
+    "noctalia-greeter": {
+      "inputs": {
+        "nixpkgs": [
+          "nix-config",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1787856212,
+        "narHash": "sha256-MMhia1PBaQoQ4iv5f09bGOT00Ni41z8awxXBl97T404=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia-greeter",
+        "rev": "eefd43230b34ffbaa9267fede4d8aef1a784294a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia-greeter",
         "type": "github"
       }
     },
