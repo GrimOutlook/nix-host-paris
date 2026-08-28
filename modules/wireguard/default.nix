@@ -6,6 +6,10 @@
   };
 
   networking.wg-quick.interfaces.wg0 = {
+    # Brought up on demand only (`systemctl start wg-quick-wg0`), not at boot.
+    # Note that `systemctl disable` would not survive the next activation --
+    # this option is what actually drops the unit's [Install] section.
+    autostart = false;
     address = [ "172.16.0.3/24" ];
     # Installed via a PostUp `wg set ... private-key` hook, so the key is
     # never copied into the world-readable /nix/store config file.
@@ -33,9 +37,11 @@
   };
 
   # The endpoint is a DNS name, and neither wg-quick nor `wg` retries a failed
-  # lookup. A boot that wins the race against DNS therefore leaves the tunnel
-  # down permanently and silently, which is exactly what happened on
-  # 2026-08-25. Retry until the name resolves.
+  # lookup: a single failure leaves wg0 up with no peer and no routes, and
+  # nothing ever tries again. paris sat in exactly that state, unnoticed, for
+  # nearly two days in August 2026. Since the interface is started by hand on a
+  # laptop that roams between networks, a start issued before the new network's
+  # DNS is usable is the common case. Retry until the name resolves.
   systemd.services.wg-quick-wg0 = {
     serviceConfig = {
       Restart = "on-failure";
