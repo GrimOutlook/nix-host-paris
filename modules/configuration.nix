@@ -25,6 +25,7 @@
     keepassxc
     qmk
     qmk_hid
+    kdePackages.kdenlive
   ];
   services.udev.packages = with pkgs; [
     qmk-udev-rules
