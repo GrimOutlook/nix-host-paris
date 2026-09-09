@@ -16,8 +16,8 @@
         User = "pi";
         ProxyJump = "Newyork";
       };
-      "Host Pyongyang" = {
-        HostName = "pyongyang";
+      "Host Dunkirk" = {
+        HostName = "dunkirk";
         User = "grim";
         ProxyJump = "Newyork";
       };
