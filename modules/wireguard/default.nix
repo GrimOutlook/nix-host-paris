@@ -1,5 +1,7 @@
 { config, ... }:
 {
+  host.nix.realtimePackages = [ "wireguard-tools" ];
+
   age.secrets.wireguard-newyork-key = {
     file = ./secrets/wireguard-newyork-key.age;
     mode = "0400";
