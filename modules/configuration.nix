@@ -34,6 +34,8 @@
   services.usbguard.rules = ''
     # Intel AX201 onboard Bluetooth adapter
     allow id 8087:0026
+    # Phone
+    allow id 18d1:4ee7
     allow id 05a6:0009 with-interface { 02:02:01 0a:00:00 }
   '';
   programs = {
