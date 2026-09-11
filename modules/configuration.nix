@@ -50,6 +50,10 @@
       inputs.homelab.homeManagerModules.default
     ];
     homelab.ssh_config.enable = true;
+    # The NixOS module owns Hyprland here. Using Home Manager's default package
+    # triggers an automatic compositor reload whenever store paths change,
+    # which can tear down this session during a deployment.
+    wayland.windowManager.hyprland.package = null;
     home = {
       packages = with pkgs; [
         obsidian
