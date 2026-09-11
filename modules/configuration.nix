@@ -32,6 +32,8 @@
   ];
   # Cisco USB console cable, for switch/router console access
   services.usbguard.rules = ''
+    # Intel AX201 onboard Bluetooth adapter
+    allow id 8087:0026
     allow id 05a6:0009 with-interface { 02:02:01 0a:00:00 }
   '';
   programs = {
