@@ -24,4 +24,12 @@
       ];
     };
   };
+
+  # The Hyprland package exposes both direct and UWSM-managed sessions. Keep
+  # the greeter from restoring the stale UWSM selection after it is disabled.
+  host.display-manager.settings = {
+    keyboard.layout = "us";
+    cursor.size = 24;
+    session.default = "Hyprland";
+  };
 }
