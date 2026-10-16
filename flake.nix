@@ -2,6 +2,7 @@
   inputs = {
     homelab.url = "git+ssh://git@github.com/GrimOutlook/nix-homelab";
     nix-config.url = "github:GrimOutlook/nix-config";
+    nix-config.inputs.opencode-permission-reviewer.url = "git+https://github.com/GrimOutlook/opencode-permission-reviewer.git?ref=review-history&rev=4ff8858a6f6eb88f9d4ce799cf237729d4304e6f";
     nixpkgs.follows = "nix-config/nixpkgs";
   };
 
